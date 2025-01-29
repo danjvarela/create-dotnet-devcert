@@ -91,8 +91,8 @@ fi
 dotnet dev-certs https --clean --import $PFXFILE -p ""
 
 if [ "$SAVE" = 1 ]; then
-   cp $CRTFILE $HOME
-   echo "Saved certificate to $HOME/$(basename $CRTFILE)"
-   cp $PFXFILE $HOME
-   echo "Saved certificate to $HOME/$(basename $PFXFILE)"
+   cp $CRTFILE $HOME/.dotnet-certificates/
+   echo "Saved certificate to $HOME/.dotnet-certificates/$(basename $CRTFILE)"
+   cp $PFXFILE $HOME/.dotnet-certificates/
+   echo "Saved certificate to $HOME/.dotnet-certificates/$(basename $PFXFILE)"
 fi
