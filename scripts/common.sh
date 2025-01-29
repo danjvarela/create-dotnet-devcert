@@ -95,4 +95,6 @@ if [ "$SAVE" = 1 ]; then
    echo "Saved certificate to $HOME/.dotnet-certificates/$(basename $CRTFILE)"
    cp $PFXFILE $HOME/.dotnet-certificates/
    echo "Saved certificate to $HOME/.dotnet-certificates/$(basename $PFXFILE)"
+   cp $KEYFILE $HOME/.dotnet-certificates/
+   echo "Saved certificate to $HOME/.dotnet-certificates/$(basename $KEYFILE)"
 fi
